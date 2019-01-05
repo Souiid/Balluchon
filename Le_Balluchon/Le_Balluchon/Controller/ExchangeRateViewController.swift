@@ -22,4 +22,19 @@ class ExchangeRateViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    @IBAction func validateValueToConvert(_ sender: Any) {
+        
+        guard let stringNumber = inputTextField.text else {return}
+        guard let numberToConvert = Double(stringNumber) else {return}
+        
+        exchangeRateService.getRate { (success, rate) in
+            if success {
+                guard let rate = rate else {return}
+                print("Rate: ", rate)
+                let convertNumber = rate * numberToConvert
+                self.usdLabel.text = String(convertNumber) + " $"
+            }
+        }
+    }
 }
