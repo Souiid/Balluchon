@@ -8,24 +8,61 @@
 
 /* Begin PBXBuildFile section */
 		D10EE15021E11B8900D56913 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10EE14F21E11B8900D56913 /* AppDelegate.swift */; };
-		D10EE15221E11B8900D56913 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10EE15121E11B8900D56913 /* ViewController.swift */; };
 		D10EE15521E11B8900D56913 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10EE15321E11B8900D56913 /* Main.storyboard */; };
 		D10EE15721E11B8A00D56913 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D10EE15621E11B8A00D56913 /* Assets.xcassets */; };
 		D10EE15A21E11B8A00D56913 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10EE15821E11B8A00D56913 /* LaunchScreen.storyboard */; };
+		D10EE16621E11C4600D56913 /* ExchangeRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10EE16521E11C4600D56913 /* ExchangeRateService.swift */; };
+		D10EE16821E11C8B00D56913 /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10EE16721E11C8B00D56913 /* ExchangeRateViewController.swift */; };
+		D1203D9921E121D100394161 /* ExchangeRateDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1203D9821E121D100394161 /* ExchangeRateDecodable.swift */; };
+		D1203DA121E126D300394161 /* Le_BalluchonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1203DA021E126D300394161 /* Le_BalluchonTests.swift */; };
+		D1203DA921E1272400394161 /* Rate.json in Resources */ = {isa = PBXBuildFile; fileRef = D1203DA821E1272400394161 /* Rate.json */; };
+		D1203DAB21E1274500394161 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1203DAA21E1274500394161 /* FakeResponseData.swift */; };
+		D1203DAD21E1275800394161 /* URLSessionDataTaskFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1203DAC21E1275800394161 /* URLSessionDataTaskFake.swift */; };
+		D1203DAF21E1276900394161 /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1203DAE21E1276900394161 /* URLSessionFake.swift */; };
+		D1D0814F21E2865900097959 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D0814E21E2865900097959 /* TranslationViewController.swift */; };
+		D1D0815121E2877700097959 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D0815021E2877700097959 /* TranslationService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1203DA321E126D300394161 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D10EE14421E11B8900D56913 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D10EE14B21E11B8900D56913;
+			remoteInfo = Le_Balluchon;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D10EE14C21E11B8900D56913 /* Le_Balluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Le_Balluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10EE14F21E11B8900D56913 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D10EE15121E11B8900D56913 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D10EE15421E11B8900D56913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D10EE15621E11B8A00D56913 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D10EE15921E11B8A00D56913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D10EE15B21E11B8A00D56913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D10EE16521E11C4600D56913 /* ExchangeRateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateService.swift; sourceTree = "<group>"; };
+		D10EE16721E11C8B00D56913 /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
+		D1203D9821E121D100394161 /* ExchangeRateDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateDecodable.swift; sourceTree = "<group>"; };
+		D1203D9E21E126D300394161 /* Le_BalluchonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Le_BalluchonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1203DA021E126D300394161 /* Le_BalluchonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Le_BalluchonTests.swift; sourceTree = "<group>"; };
+		D1203DA221E126D300394161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1203DA821E1272400394161 /* Rate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Rate.json; sourceTree = "<group>"; };
+		D1203DAA21E1274500394161 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
+		D1203DAC21E1275800394161 /* URLSessionDataTaskFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskFake.swift; sourceTree = "<group>"; };
+		D1203DAE21E1276900394161 /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
+		D1D0814E21E2865900097959 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
+		D1D0815021E2877700097959 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D10EE14921E11B8900D56913 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1203D9B21E126D300394161 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				D10EE14E21E11B8900D56913 /* Le_Balluchon */,
+				D1203D9F21E126D300394161 /* Le_BalluchonTests */,
 				D10EE14D21E11B8900D56913 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				D10EE14C21E11B8900D56913 /* Le_Balluchon.app */,
+				D1203D9E21E126D300394161 /* Le_BalluchonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +93,63 @@
 		D10EE14E21E11B8900D56913 /* Le_Balluchon */ = {
 			isa = PBXGroup;
 			children = (
-				D10EE14F21E11B8900D56913 /* AppDelegate.swift */,
-				D10EE15121E11B8900D56913 /* ViewController.swift */,
-				D10EE15321E11B8900D56913 /* Main.storyboard */,
-				D10EE15621E11B8A00D56913 /* Assets.xcassets */,
-				D10EE15821E11B8A00D56913 /* LaunchScreen.storyboard */,
-				D10EE15B21E11B8A00D56913 /* Info.plist */,
+				D10EE16121E11BCF00D56913 /* Model */,
+				D10EE16221E11BD300D56913 /* Controller */,
+				D10EE16421E11BE900D56913 /* View */,
+				D10EE16321E11BDE00D56913 /* Supporting Files */,
 			);
 			path = Le_Balluchon;
+			sourceTree = "<group>";
+		};
+		D10EE16121E11BCF00D56913 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D10EE16521E11C4600D56913 /* ExchangeRateService.swift */,
+				D1203D9821E121D100394161 /* ExchangeRateDecodable.swift */,
+				D1D0815021E2877700097959 /* TranslationService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D10EE16221E11BD300D56913 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D10EE16721E11C8B00D56913 /* ExchangeRateViewController.swift */,
+				D1D0814E21E2865900097959 /* TranslationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D10EE16321E11BDE00D56913 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D10EE14F21E11B8900D56913 /* AppDelegate.swift */,
+				D10EE15B21E11B8A00D56913 /* Info.plist */,
+				D10EE15621E11B8A00D56913 /* Assets.xcassets */,
+				D10EE15821E11B8A00D56913 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D10EE16421E11BE900D56913 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D10EE15321E11B8900D56913 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1203D9F21E126D300394161 /* Le_BalluchonTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1203DA021E126D300394161 /* Le_BalluchonTests.swift */,
+				D1203DA821E1272400394161 /* Rate.json */,
+				D1203DAA21E1274500394161 /* FakeResponseData.swift */,
+				D1203DAC21E1275800394161 /* URLSessionDataTaskFake.swift */,
+				D1203DAE21E1276900394161 /* URLSessionFake.swift */,
+				D1203DA221E126D300394161 /* Info.plist */,
+			);
+			path = Le_BalluchonTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +172,24 @@
 			productReference = D10EE14C21E11B8900D56913 /* Le_Balluchon.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D1203D9D21E126D300394161 /* Le_BalluchonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1203DA521E126D300394161 /* Build configuration list for PBXNativeTarget "Le_BalluchonTests" */;
+			buildPhases = (
+				D1203D9A21E126D300394161 /* Sources */,
+				D1203D9B21E126D300394161 /* Frameworks */,
+				D1203D9C21E126D300394161 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1203DA421E126D300394161 /* PBXTargetDependency */,
+			);
+			name = Le_BalluchonTests;
+			productName = Le_BalluchonTests;
+			productReference = D1203D9E21E126D300394161 /* Le_BalluchonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +202,10 @@
 				TargetAttributes = {
 					D10EE14B21E11B8900D56913 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					D1203D9D21E126D300394161 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D10EE14B21E11B8900D56913;
 					};
 				};
 			};
@@ -113,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				D10EE14B21E11B8900D56913 /* Le_Balluchon */,
+				D1203D9D21E126D300394161 /* Le_BalluchonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +239,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D1203D9C21E126D300394161 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1203DA921E1272400394161 /* Rate.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -135,12 +254,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D10EE15221E11B8900D56913 /* ViewController.swift in Sources */,
+				D1203D9921E121D100394161 /* ExchangeRateDecodable.swift in Sources */,
+				D10EE16621E11C4600D56913 /* ExchangeRateService.swift in Sources */,
+				D10EE16821E11C8B00D56913 /* ExchangeRateViewController.swift in Sources */,
 				D10EE15021E11B8900D56913 /* AppDelegate.swift in Sources */,
+				D1D0814F21E2865900097959 /* TranslationViewController.swift in Sources */,
+				D1D0815121E2877700097959 /* TranslationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1203D9A21E126D300394161 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1203DA121E126D300394161 /* Le_BalluchonTests.swift in Sources */,
+				D1203DAF21E1276900394161 /* URLSessionFake.swift in Sources */,
+				D1203DAD21E1275800394161 /* URLSessionDataTaskFake.swift in Sources */,
+				D1203DAB21E1274500394161 /* FakeResponseData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1203DA421E126D300394161 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D10EE14B21E11B8900D56913 /* Le_Balluchon */;
+			targetProxy = D1203DA321E126D300394161 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D10EE15321E11B8900D56913 /* Main.storyboard */ = {
@@ -283,7 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Le_Balluchon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Le_Balluchon/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Le_Balluchon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Le_Balluchon/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +451,44 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D1203DA621E126D300394161 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Le_BalluchonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.idriss-souissi.Le-BalluchonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Le_Balluchon.app/Le_Balluchon";
+			};
+			name = Debug;
+		};
+		D1203DA721E126D300394161 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Le_BalluchonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.idriss-souissi.Le-BalluchonTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Le_Balluchon.app/Le_Balluchon";
 			};
 			name = Release;
 		};
@@ -329,6 +509,15 @@
 			buildConfigurations = (
 				D10EE15F21E11B8A00D56913 /* Debug */,
 				D10EE16021E11B8A00D56913 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1203DA521E126D300394161 /* Build configuration list for PBXNativeTarget "Le_BalluchonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1203DA621E126D300394161 /* Debug */,
+				D1203DA721E126D300394161 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
