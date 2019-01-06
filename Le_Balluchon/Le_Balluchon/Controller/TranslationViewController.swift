@@ -10,16 +10,27 @@ import UIKit
 
 class TranslationViewController: UIViewController {
 
+    var translationService = TranslationService()
+    @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var translateTextView: UITextView!
+    @IBOutlet weak var translateButton: UIButton!
+    
+    var textToTranslate = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var inputTextField: UITextField!
-    @IBOutlet weak var translateTextView: UITextView!
-    
-    @IBOutlet weak var translateButton: UIButton!
-    
+   @IBAction func displayTranslation() {
+        guard let textToTranslate = inputTextField.text else {return}
+        translationService.getTranslation { (success, translation) in
+            if success {
+                
+                
+            }
+        }
+    }
 
 }
