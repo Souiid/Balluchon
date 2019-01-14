@@ -16,15 +16,22 @@ class WeatherViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var weatherService = WeatherService()
+    
+    @IBOutlet weak var getWeatherButton: UIButton!
+    
+    @IBAction func getWeather(_ sender: Any) {
+        weatherService.getWeather { (success, weatherID) in
+            
+        }
+                
+                
     }
-    */
-
 }
+    
+    
+    
+    
+
+
+
