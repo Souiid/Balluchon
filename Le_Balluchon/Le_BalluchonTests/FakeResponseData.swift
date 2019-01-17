@@ -16,7 +16,13 @@ class FakeResponseData {
         return try! Data(contentsOf: url)
     }
     
-    static let rateIncorrectData = "erreur".data(using: .utf8)!
+    static var translationCorrectData: Data? {
+        let bundle = Bundle(for: FakeResponseData.self)
+        let url = bundle.url(forResource: "Translation", withExtension: "json")!
+        return try! Data(contentsOf: url)
+    }
+   
+    static let testIncorrectData = "erreur".data(using: .utf8)!
     
     
     
@@ -31,6 +37,6 @@ class FakeResponseData {
     
     
     // MARK: - Error
-    class QuoteError: Error {}
-    static let error = QuoteError()
+    class TestError: Error {}
+    static let error = TestError()
 }
