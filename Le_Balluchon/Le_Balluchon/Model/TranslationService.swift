@@ -10,38 +10,41 @@ import Foundation
 
 class TranslationService {
     
-    let translateURL = URL(string: "https://translation.googleapis.com/language/translate/v2")!
-    
-    let translationURL = URL(string: "https://translation.googleapis.com/language/translate/v2?q=hello&target=fr&key=AIzaSyDucJCPjzy0CKhZebU1BO85AqIkPA_Ecto&source=en")!
+    let translationURL = URL(string: "https://www.googleapis.com/language/translate/v2?key=AIzaSyACLgUNug4UHOoMrOrhoryp-iMepoQh7Yw&source=fr&target=en&format=text&q=Bonjour")!
     var task: URLSessionTask?
     
-    //let translationController = TranslationController()
+   
     
-    func getTranslation(callback: @escaping (Bool, String)->Void){
-        let request = createRequest()
+    func getTranslation(text: String, callback: @escaping (Bool, String?)->Void){
+       
+        guard let url = URL(string: createRequest(text: text)) else {return}
         let session = URLSession(configuration: .default)
         
-        task = session.dataTask(with: translationURL, completionHandler: { (data, response, error) in
+        task = session.dataTask(with: url, completionHandler: { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data else {
-                    callback(false, "")
+                    print("no data")
+                    callback(false, nil)
                     return
                 }
                 
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                     print("noresponse")
-                    callback(false, "")
+                    callback(false, nil)
                     return
                 }
                 
-                //                guard let responseJSON = try? JSONDecoder().decode(Translation.self, from: data) else {
-                //                    //print(<#T##items: Any...##Any#>)
-                //                    callback(false, "")
-                //                    return
-                //                }
+                guard let responseJSON = try? JSONDecoder().decode(Translaltion.self, from: data) else {
+                    
+                    print("no decode")
+                    callback(false, nil)
+                    return
+                }
+                callback(true, responseJSON.data.translations[0].translatedText)
+               
                 
-                // let translation = responseJSON.translation["translatedText"]
-                //print("Translation : ", translation)
+            
+               
                 
                 
                 print("data : ", data)
@@ -51,15 +54,12 @@ class TranslationService {
         task?.resume()
 }
 
-    func createRequest()->URLRequest {
-        // let textToTranslate = translationController.textToTranslate
-        // print("Text To TRANSLATE : ", textToTranslate)
-        var request = URLRequest(url: translateURL)
-        request.httpMethod = "POST"
-        let body = "q=hello&target=fr&key=AIzaSyACLgUNug4UHOoMrOrhoryp-iMepoQh7Yw&source=en"
-        // q=\(translationController.textToTranslate)
-        request.httpBody = body.data(using: .utf8)
-        return request
+    func createRequest(text: String)->String {
+       let baseURL = "https://www.googleapis.com/language/translate/v2?key=AIzaSyACLgUNug4UHOoMrOrhoryp-iMepoQh7Yw&source=fr&target=en&format=text&q="
+        
+        guard let textEncoded = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return ""}
+        let stringUrl = baseURL + textEncoded
+        return stringUrl
     }
 }
 
