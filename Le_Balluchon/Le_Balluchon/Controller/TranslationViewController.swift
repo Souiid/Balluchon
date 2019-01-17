@@ -25,11 +25,9 @@ class TranslationViewController: UIViewController {
     
    @IBAction func displayTranslation() {
         guard let textToTranslate = inputTextField.text else {return}
-        translationService.getTranslation { (success, translation) in
-            if success {
-                
-                
-            }
+        translationService.getTranslation(text: textToTranslate) { (success, textTranslated) in
+            guard let textTranslated = textTranslated else {return}
+            self.translateTextView.text = textTranslated
         }
     }
 
