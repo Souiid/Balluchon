@@ -10,23 +10,38 @@ import UIKit
 
 class WeatherViewController: UIViewController {
 
-    override func viewDidLoad() {
+    let weatherService = WeatherService()
+   
+    @IBOutlet var townNameLabel: [UILabel]!
+    
+    @IBOutlet var descriptionsLabel: [UILabel]!
+    @IBOutlet var temperaturesLabel: [UILabel]!
+    @IBOutlet var cloudLabel: [UILabel]!
+    @IBOutlet var windLabel: [UILabel]!
+    
+   override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        displayWeather()
     }
     
-    var weatherService = WeatherService()
-    
-    @IBOutlet weak var getWeatherButton: UIButton!
-    
-    @IBAction func getWeather(_ sender: Any) {
-        weatherService.getWeather { (success, weatherID) in
+    func displayWeather() {
+        weatherService.getWeather { (success, responseJSON) in
+            if success {
+                guard let responseJSON = responseJSON else {return}
+//                for i in 0...1 {
+//                    self.townNameLabel[i].text = responseJSON.list[i].name
+//                    self.descriptionsLabel[i].text = responseJSON.list[i].weather[i].description
+//                    self.temperaturesLabel[i].text = String(responseJSON.list[i].main.temp) + " °C"
+//                    self.cloudLabel[i].text = String(responseJSON.list[i].clouds.all) + " % of sky"
+//                    self.windLabel[i].text = String(responseJSON.list[i].wind.speed) + " nodes"
+//                }
+                self.townNameLabel[0].text = responseJSON.list[0].name
+                 self.temperaturesLabel[0].text = String(responseJSON.list[0].main.temp) + " °C"
+                self.temperaturesLabel[1].text = String(responseJSON.list[1].main.temp) + " °C"
+            }
             
         }
-                
-                
-    }
+     }
 }
     
     
