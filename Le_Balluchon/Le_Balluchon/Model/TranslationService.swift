@@ -10,16 +10,18 @@ import Foundation
 
 class TranslationService {
     
-    let translationURL = URL(string: "https://www.googleapis.com/language/translate/v2?key=AIzaSyACLgUNug4UHOoMrOrhoryp-iMepoQh7Yw&source=fr&target=en&format=text&q=Bonjour")!
+    
     var task: URLSessionTask?
+    var session: URLSession
     
-   
+    init(session: URLSession = URLSession(configuration: .default)) {
+        self.session = session
+    }
     
-    func getTranslation(text: String, callback: @escaping (Bool, String?)->Void){
+    func getTranslation(selectedIndex: Int, text: String, callback: @escaping (Bool, String?)->Void){
        
-        guard let url = URL(string: createRequest(text: text)) else {return}
-        let session = URLSession(configuration: .default)
-        
+        guard let url = URL(string: createUrlRequest(selectedIndex: selectedIndex, text: text)) else {return}
+    
         task = session.dataTask(with: url, completionHandler: { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data else {
@@ -41,12 +43,6 @@ class TranslationService {
                     return
                 }
                 callback(true, responseJSON.data.translations[0].translatedText)
-               
-                
-            
-               
-                
-                
                 print("data : ", data)
                 
             }
@@ -54,9 +50,17 @@ class TranslationService {
         task?.resume()
 }
 
-    func createRequest(text: String)->String {
-       let baseURL = "https://www.googleapis.com/language/translate/v2?key=AIzaSyACLgUNug4UHOoMrOrhoryp-iMepoQh7Yw&source=fr&target=en&format=text&q="
-        
+   private func createUrlRequest(selectedIndex: Int, text: String)->String {
+        var baseURL: String
+        switch selectedIndex {
+        case 0:
+            baseURL = "https://www.googleapis.com/language/translate/v2?key=AIzaSyACLgUNug4UHOoMrOrhoryp-iMepoQh7Yw&source=fr&target=en&format=text&q="
+        case 1:
+            baseURL = "https://www.googleapis.com/language/translate/v2?key=AIzaSyACLgUNug4UHOoMrOrhoryp-iMepoQh7Yw&source=en&target=fr&format=text&q="
+        default:
+            return ""
+        }
+       
         guard let textEncoded = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return ""}
         let stringUrl = baseURL + textEncoded
         return stringUrl
