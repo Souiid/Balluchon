@@ -10,14 +10,17 @@ import Foundation
 
 class TranslationService {
     
-    
+    //MARK: - Attributes
     var task: URLSessionTask?
     var session: URLSession
+    
+    //MARK: - Methods
     
     init(session: URLSession = URLSession(configuration: .default)) {
         self.session = session
     }
     
+    //Get translation to googleapitranslate
     func getTranslation(selectedIndex: Int, text: String, callback: @escaping (Bool, String?)->Void){
        
         guard let url = URL(string: createUrlRequest(selectedIndex: selectedIndex, text: text)) else {return}
@@ -50,7 +53,8 @@ class TranslationService {
         task?.resume()
 }
 
-   private func createUrlRequest(selectedIndex: Int, text: String)->String {
+    //Mofify urlRequest according to selectedIndex of segmentControl
+    func createUrlRequest(selectedIndex: Int, text: String)->String {
         var baseURL: String
         switch selectedIndex {
         case 0:
