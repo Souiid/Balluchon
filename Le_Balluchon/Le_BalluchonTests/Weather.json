@@ -1,0 +1,87 @@
+{
+    "cnt": 2,
+    "list": [
+        {
+            "coord": {
+                "lon": -75.5,
+                "lat": 43
+            },
+            "sys": {
+                "type": 0,
+                "id": 0,
+                "message": 0.0045,
+                "country": "US",
+                "sunrise": 1549282389,
+                "sunset": 1549318760
+            },
+            "weather": [
+                {
+                    "id": 802,
+                    "main": "Clouds",
+                    "description": "scattered clouds",
+                    "icon": "03d"
+                }
+            ],
+            "main": {
+                "temp": 11.2,
+                "pressure": 996.56,
+                "humidity": 74,
+                "temp_min": 11.2,
+                "temp_max": 11.2,
+                "sea_level": 1028.48,
+                "grnd_level": 996.56
+            },
+            "wind": {
+                "speed": 1.52,
+                "deg": 187
+            },
+            "clouds": {
+                "all": 44
+            },
+            "dt": 1549298568,
+            "id": 5128638,
+            "name": "New York"
+        },
+        {
+            "coord": {
+                "lon": 2.57,
+                "lat": 44.35
+            },
+            "sys": {
+                "type": 0,
+                "id": 0,
+                "message": 0.0038,
+                "country": "FR",
+                "sunrise": 1549263845,
+                "sunset": 1549299829
+            },
+            "weather": [
+                {
+                    "id": 803,
+                    "main": "Clouds",
+                    "description": "broken clouds",
+                    "icon": "04d"
+                }
+            ],
+            "main": {
+                "temp": 0.37,
+                "pressure": 976.54,
+                "humidity": 77,
+                "temp_min": 0.37,
+                "temp_max": 0.37,
+                "sea_level": 1042.06,
+                "grnd_level": 976.54
+            },
+            "wind": {
+                "speed": 0.92,
+                "deg": 82.0003
+            },
+            "clouds": {
+                "all": 64
+            },
+            "dt": 1549298568,
+            "id": 2983154,
+            "name": "Rodez"
+        }
+    ]
+}
