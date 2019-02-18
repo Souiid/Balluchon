@@ -9,24 +9,26 @@
 import UIKit
 
 class ExchangeRateViewController: UIViewController {
-    
-    // let exchangeRate = ExchangeRateService()
-    
+    //MARK: - Attributes and OUTLETS
     @IBOutlet weak var usdLabel: UILabel!
     @IBOutlet weak var inputTextField: UITextField!
-    @IBOutlet weak var validateButton: UIButton!
     let exchangeRateService = ExchangeRateService()
     
-    
+    //MARK: - Methods and Actions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
+    //Action to use the callback and display rate
     @IBAction func validateValueToConvert(_ sender: Any) {
         
         guard let stringNumber = inputTextField.text else {return}
-        guard let numberToConvert = Double(stringNumber) else {return}
+        
+        guard let numberToConvert = Double(stringNumber) else {
+            presentAlert(message: "You can't convert this number")
+            return
+            
+        }
         
         exchangeRateService.getRate { (success, rate) in
             if success {
@@ -37,4 +39,13 @@ class ExchangeRateViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        inputTextField.resignFirstResponder()
+    }
+    
 }
+
+
+
+
