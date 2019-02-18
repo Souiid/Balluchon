@@ -5,24 +5,28 @@
 //  Created by Souissi idriss2 on 14/01/2019.
 //  Copyright © 2019 Souissi idriss2. All rights reserved.
 
-//Label Meteo, Gestion clavier, containte chiffre rate, url translate, commentaires
+// 
 //
 
 import Foundation
 
 class WeatherService {
     
+    //MARK: - Attributes
     var session: URLSession
+    var task: URLSessionTask?
+    
+    //MARK: - Methods
     init(session: URLSession = URLSession(configuration: .default)) {
         self.session = session
     }
     
-    var task: URLSessionTask?
-    
+   
+    //Get weather to the openweathermap API
     func getWeather(callback: @escaping (Bool, WeatherDecodable?) -> Void) {
         task?.cancel()
-        //Déballer
-       let weatherURL = URL(string: "http://api.openweathermap.org/data/2.5/group?id=5128638,2983154&units=metric&appid=c0c3352eed0b11d7ee13876326e5a710")!
+      
+        guard let weatherURL = URL(string: "http://api.openweathermap.org/data/2.5/group?id=5128638,2983154&units=metric&appid=c0c3352eed0b11d7ee13876326e5a710") else {return}
         
         task = session.dataTask(with: weatherURL, completionHandler: { (data, response, error) in
             DispatchQueue.main.async {
