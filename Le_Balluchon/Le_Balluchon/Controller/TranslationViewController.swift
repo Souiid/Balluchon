@@ -9,24 +9,24 @@
 import UIKit
 
 class TranslationViewController: UIViewController {
-//Renommer outlets
+
+    //MARK: - Attributes and OUTLETS
     let translationService = TranslationService()
     @IBOutlet weak var inputTextField: UITextField!
-    
     @IBOutlet weak var controllerTitleLabel: UILabel!
-    
     @IBOutlet weak var langageSegmentControl: UISegmentedControl!
     @IBOutlet weak var translateTextView: UITextView!
     @IBOutlet weak var translateButton: UIButton!
     
     
-    
+     //MARK: - Methods and Actions
     override func viewDidLoad() {
         super.viewDidLoad()
         langageSegmentControl.selectedSegmentIndex = 0
         changeLanguage(langageSegmentControl)
     }
     
+    //Display translation according to the text to translate and the segment control
    @IBAction func displayTranslation() {
         guard let textToTranslate = inputTextField.text else {return}
         translationService.getTranslation(selectedIndex: langageSegmentControl.selectedSegmentIndex, text: textToTranslate) { (success, textTranslated) in
@@ -35,7 +35,7 @@ class TranslationViewController: UIViewController {
         }
     }
     
-
+    //Change text of labels according to segment control
     @IBAction func changeLanguage(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -51,7 +51,7 @@ class TranslationViewController: UIViewController {
         }
         
     }
-    
+    //Dismiss keyboard
     @IBAction func dismissKeybord(_ sender: UITapGestureRecognizer) {
         inputTextField.resignFirstResponder()
     }
