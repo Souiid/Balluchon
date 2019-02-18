@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+struct Translaltion: Decodable {
+    let data: TranslationData
+}
+
+struct TranslationData: Decodable {
+     let translations: [TranslationText]
+}
+
+struct TranslationText: Decodable {
+    let translatedText: String
+}
+
+
+
+
+
+
+
+
