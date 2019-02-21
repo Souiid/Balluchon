@@ -33,12 +33,11 @@ struct Main: Decodable {
 }
 
 struct Weather: Decodable {
-    let id: Int
-    let main, description: String
+   let description: String
 }
 
 struct Wind: Decodable {
-    let speed, deg: Double
+    let speed: Double
 }
 
 

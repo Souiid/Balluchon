@@ -22,7 +22,7 @@ class TranslationService {
     
     //Get translation to googleapitranslate
     func getTranslation(selectedIndex: Int, text: String, callback: @escaping (Bool, String?)->Void){
-       
+        task?.cancel()
         guard let url = URL(string: createUrlRequest(selectedIndex: selectedIndex, text: text)) else {return}
     
         task = session.dataTask(with: url, completionHandler: { (data, response, error) in
