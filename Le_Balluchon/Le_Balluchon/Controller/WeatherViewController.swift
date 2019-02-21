@@ -28,14 +28,16 @@ class WeatherViewController: UIViewController {
     //Display weather to the labels
     func displayWeather() {
         weatherService.getWeather { (success, responseJSON) in
+            print("Success : ", success)
             if success {
+               
                 guard let responseJSON = responseJSON else {return}
                 for i in 0..<2 {
                     self.townNameLabel[i].text = responseJSON.list[i].name
-                    self.descriptionsLabel[i].text = responseJSON.list[i].weather[0].description
-                    self.temperaturesLabel[i].text = String(responseJSON.list[i].main.temp) + " °C"
-                    self.cloudLabel[i].text = String(responseJSON.list[i].clouds.all) + " % of sky"
-                    self.windLabel[i].text = String(responseJSON.list[i].wind.speed) + " nodes"
+                    self.descriptionsLabel[i].text = "Description : " + responseJSON.list[i].weather[0].description
+                    self.temperaturesLabel[i].text = "Temperature : " + String(responseJSON.list[i].main.temp) + " °C"
+                    self.cloudLabel[i].text = "Cloud : " + String(responseJSON.list[i].clouds.all) + " % of sky"
+                    self.windLabel[i].text = "Wind : " + String(responseJSON.list[i].wind.speed) + " nodes"
                 }
             }
             
