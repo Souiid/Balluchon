@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Le_Balluchon/Model/WeatherService.swift"
-            timestampString = "571949143.919691"
+            timestampString = "572285727.262538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Le_Balluchon/Model/WeatherService.swift"
-            timestampString = "571949143.9197921"
+            timestampString = "572285727.263629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Le_Balluchon/Model/WeatherService.swift"
-            timestampString = "571949143.919874"
+            timestampString = "572285727.2641701"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Le_Balluchon/Model/WeatherService.swift"
-            timestampString = "571949143.919951"
+            timestampString = "572285727.2646739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -90,23 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Le_Balluchon/Controller/WeatherViewController.swift"
-            timestampString = "572282455.3273031"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "displayWeather()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Le_Balluchon/Controller/WeatherViewController.swift"
-            timestampString = "572282455.3277889"
+            timestampString = "572365914.835721"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -122,12 +106,108 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Le_Balluchon/Controller/WeatherViewController.swift"
-            timestampString = "572282455.3281161"
+            timestampString = "572365914.8358001"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "displayWeather()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Le_Balluchon/Controller/WeatherViewController.swift"
+            timestampString = "572365914.8358589"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Le_Balluchon/Controller/WeatherViewController.swift"
+            timestampString = "572365914.835914"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "displayWeather()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Le_Balluchon.WeatherViewController.displayWeather() -&gt; ()"
+                  moduleName = "Le_Balluchon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/souissiidriss2/Desktop/Informatique/Projet%209/Balluchon/Le_Balluchon/Le_Balluchon/Controller/WeatherViewController.swift"
+                  timestampString = "572282628.8164819"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "39">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Le_Balluchon.WeatherDecodable&gt;) -&gt; () in Le_Balluchon.WeatherViewController.displayWeather() -&gt; ()"
+                  moduleName = "Le_Balluchon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/souissiidriss2/Desktop/Informatique/Projet%209/Balluchon/Le_Balluchon/Le_Balluchon/Controller/WeatherViewController.swift"
+                  timestampString = "572282628.8211679"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "79">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Le_Balluchon/Controller/WeatherViewController.swift"
+            timestampString = "572365914.835969"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Le_Balluchon/Controller/WeatherViewController.swift"
+            timestampString = "572365914.8360209"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "displayWeather()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
